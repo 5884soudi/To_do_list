@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="./assets/img/soudi_logo.png" alt="ソウディロゴ">
+        </div>
+    </header>
+    <main>
+        <div class="main">
+            <ul class="contens">
+                <div class="merchandise">
+                       <li>仕事<br><br>1</li>
+                       <input type="button" id="btn" value="" class="button">
+                </div>
+                <div class="merchandise">
+                  <li>勉強<br><br>2</li>
+                  <input type="button" id="btn" value="" class="button">
+                </div>
+                <div class="merchandise">
+                  <li>遊び<br><br>3</li>
+                  <input type="button" id="btn" value="" class="button">
+                </div>
+                <div class="merchandise">
+                  <li class="workout">トレーニング<br><br>4</li>
+                  <input type="button" id="btn" value="" class="button">
+                </div>
+            </ul>
+
+            <div class="menu">
+                <div class="info"></div>
+                <div class="money">
+                    <select name="items" id="item-select">
+                        <option class="selectNumber" value="選択">数字を選択</option>
+                        <option class="selectNumber" value="仕事">1</option>
+                        <option class="selectNumber" value="勉強">2</option>
+                        <option class="selectNumber" value="遊び">3</option>
+                        <option class="selectNumber" value="トレーニング">4</option>
+                    </select>
+                    <button id="go"></button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="items">
+            <div class="coment">
+
+            </div>
+            <div id="output">
+                <div id="output1">
+                    <h1>仕事</h1>
+                    <ul class="todo-list">
+                        <!-- ここに要素が追加されていく1 -->
+                    </ul>
+        
+                </div>
+                <div id="output2">
+                    <h1>勉強</h1>
+                    <ul class="todo-list">
+                        <!-- ここに要素が追加されていく2 -->
+                    </ul>
+        
+                </div>
+                <div id="output3">
+                    <h1>遊び</h1>
+                    <ul class="todo-list">
+                        <!-- ここに要素が追加されていく3 -->
+                    </ul>
+        
+                </div>
+                <div id="output4">
+                    <h1>トレーニング</h1>
+                    <ul class="todo-list">
+                        <!-- ここに要素が追加されていく -->
+                    </ul>
+        
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="./assets/Js/script.js"></script>
+</body>
+</html>
