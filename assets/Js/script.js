@@ -13,7 +13,7 @@ text.style.type == 'text';
 text.classList.add('input');
 
 selectBtn.addEventListener('click', function () {
-    console.log(selectItem.value);
+    // console.log(selectItem.value);
     if (selectItem.value !== '選択') {
         if (selectItem.value == '仕事') {
             text.placeholder = '仕事頑張るぞ！'
@@ -25,7 +25,7 @@ selectBtn.addEventListener('click', function () {
             text.placeholder = 'Just Do It !!'
         }
         Info[0].appendChild(text);
-        console.log(Info[0]);
+        // console.log(Info[0]);
     }
 });
 
@@ -34,36 +34,38 @@ let outBtn = document.getElementsByClassName('button')
 // console.log(outBtn);
 for (let i = 0; i < outBtn.length; i++) {
     outBtn[i].addEventListener('click', function () {
-        const outPutText = text.value;
-        // console.log(outPutText);
-        let liTag = document.createElement('li');
-        // console.log(liTag);
-        liTag.classList.add('list');
-        liTag.textContent = outPutText;
-        let ulTag = document.getElementsByClassName('todo-list');
-        // console.log(ulTag[0]);
+        if (text.value != '') {
+            const outPutText = text.value;
+            // console.log(outPutText);
+            let liTag = document.createElement('li');
+            // console.log(liTag);
+            liTag.classList.add('list');
+            liTag.textContent = outPutText;
+            let ulTag = document.getElementsByClassName('todo-list');
+            // console.log(ulTag[0]);
 
-        if (selectItem.value == '仕事'){
-            ulTag[0].appendChild(liTag);
-        }else if (selectItem.value == '勉強'){
-            ulTag[1].appendChild(liTag);
-        }else if (selectItem.value == '遊び'){
-            ulTag[2].appendChild(liTag);
-        }else if (selectItem.value == 'トレーニング'){
-            ulTag[3].appendChild(liTag);
+            if (selectItem.value == '仕事') {
+                ulTag[0].appendChild(liTag);
+            } else if (selectItem.value == '勉強') {
+                ulTag[1].appendChild(liTag);
+            } else if (selectItem.value == '遊び') {
+                ulTag[2].appendChild(liTag);
+            } else if (selectItem.value == 'トレーニング') {
+                ulTag[3].appendChild(liTag);
+            }
+            text.value = '';
+
+
+            let deleteBtn = document.createElement('div');
+            // console.log(deleteBtn);
+            deleteBtn.textContent = '削除';
+            deleteBtn.classList.add('delete');
+            liTag.appendChild(deleteBtn);
+            // console.log(liTag);
+            deleteBtn.addEventListener('click', function () {
+                this.parentElement.remove();
+            })
         }
-        text.value = '';
-
-
-        let deleteBtn = document.createElement('div');
-        // console.log(deleteBtn);
-        deleteBtn.textContent = '削除';
-        deleteBtn.classList.add('delete');
-        liTag.appendChild(deleteBtn);
-        // console.log(liTag);
-        deleteBtn.addEventListener('click', function () {
-            this.parentElement.remove();
-        })
 
     })
 }
