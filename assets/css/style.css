@@ -16,6 +16,10 @@ body {
     width: auto;
     margin: auto;
 }
+main {
+    width: 1152px;
+    margin: 0 auto;
+}
 
 .menu {
     display: flex;
@@ -80,14 +84,12 @@ input[type="text"] {
     margin: 10px auto;
 }
 
-.humberger-bands {
-    
-}
+
 
 .contens {
     display: flex;
     background-color: white;
-    margin: 10px 30px;
+    margin: 20px 50px;
 }
 
 .merchandise {
@@ -117,6 +119,11 @@ input[type="text"] {
     border-radius: 10px;
     background-color: blue;
 
+}
+
+footer {
+    width: 1152px;
+    margin: 0 auto;
 }
 
 .items {
